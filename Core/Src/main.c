@@ -54,11 +54,10 @@ int main(void){
 	  temp2 = Temp_byte2;
 	  SUM = read_dht11();
 
-//	  if (SUM == (Rh_byte1+Rh_byte2+Temp_byte1+Temp_byte2))
-//	  	{
-//		  HAL_Delay(1000);
-//	  	}
-//	  HAL_Delay(1000);
+	  if (SUM == (Rh_byte1+Rh_byte2+Temp_byte1+Temp_byte2))
+	  	{
+		  //Correct
+	  	}
   }
 
 }
@@ -209,7 +208,7 @@ uint8_t init_DHT11(void) {
 	dht_low_signal_sent = 1;
 
 	while(is_dht_signal_high){
-		//TODO crear como un reloj que si llegua a 400us determine que ha sufrido un timeout
+		//TODO add timeouts
 	}
 	dht_high_signal_sent = 1;
 
