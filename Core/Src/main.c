@@ -247,10 +247,10 @@ int dht11_is_ready(void){
 }
 
 uint8_t read_dht11(void){
-//
-//	if(!dht11_is_ready()){
-//		init_DHT11();
-//	}
+
+	if(!dht11_is_ready()){
+		init_DHT11();
+	}
 
 	for (int j = 0; j < 8; ++j) {
 
